@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.greendill.greendillmall</groupId>
     <artifactId>greendillmall</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>greendillmall</name>
     <description>聚合服务</description>
@@ -14,6 +15,8 @@
         <module>greendillmall-order</module>
         <module>greendillmall-member</module>
         <module>greendillmall-coupon</module>
+        <module>greendillmall-common</module>
+        <module>greendillmall-admin</module>
     </modules>
 
 </project>
