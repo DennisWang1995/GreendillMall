@@ -15,8 +15,11 @@ class GreendillmallProductApplicationTests {
     @Test
     void contextLoads() {
         BrandEntity BrandEntity = new BrandEntity();
-        BrandEntity.setName("Apple");
-        BrandService.save(BrandEntity);
+        BrandEntity.setBrandId(1L);
+        BrandEntity.setDescript("1231231 ");
+        //////////保存
+//        BrandEntity.setName("xiao mi");
+        BrandService.updateById(BrandEntity);
         System.out.println("保存成功"+BrandEntity);
     }
 
