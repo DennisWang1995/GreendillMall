@@ -17,6 +17,7 @@
         <module>greendillmall-coupon</module>
         <module>greendillmall-common</module>
         <module>greendillmall-admin</module>
+        <module>greendillmall-generator</module>
     </modules>
 
 </project>
