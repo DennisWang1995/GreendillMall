@@ -80,6 +80,8 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-nacos-discovery</artifactId>
         </dependency>
+<!--        -->
+
     </dependencies>
     <!--        spring cloud alibaba-->
    <dependencyManagement>

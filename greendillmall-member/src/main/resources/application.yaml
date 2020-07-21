@@ -4,7 +4,6 @@ spring:
     password: Wangyu19950610.
     url: jdbc:mysql://129.146.45.75:3306/greendillmall_ums?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
-
   cloud:
       nacos:
         discovery:

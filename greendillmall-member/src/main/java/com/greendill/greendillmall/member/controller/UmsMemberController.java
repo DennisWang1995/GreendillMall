@@ -3,6 +3,7 @@ package com.greendill.greendillmall.member.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.greendill.greendillmall.member.feign.CouponFeighService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,7 +30,15 @@ import com.greendill.common.utils.R;
 public class UmsMemberController {
     @Autowired
     private UmsMemberService umsMemberService;
-
+    @Autowired
+    CouponFeighService CouponFeighService;
+    @RequestMapping("/coupons")
+    public R MemberCoupons(){
+        UmsMemberEntity UmsMemberEntity = new UmsMemberEntity();
+        UmsMemberEntity.setUsername("zzzz");
+        R coupons = CouponFeighService.Coupons();
+        return R.ok().put("member",UmsMemberEntity).put("coupons",coupons.get("coupons"));
+    }
     /**
      * 列表
      */

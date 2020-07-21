@@ -29,7 +29,15 @@ import com.greendill.common.utils.R;
 public class SmsCouponController {
     @Autowired
     private SmsCouponService smsCouponService;
+    
 
+
+    @RequestMapping("/member/list")
+    public R Coupons(){
+        SmsCouponEntity SmsCouponEntity = new SmsCouponEntity();
+        SmsCouponEntity.setCouponName("满100减10");
+        return R.ok().put("coupons",Arrays.asList(SmsCouponEntity));
+    }
     /**
      * 列表
      */
