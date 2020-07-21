@@ -2,7 +2,8 @@ package com.greendill.greendillmall.product;
 
 import com.greendill.greendillmall.product.entity.BrandEntity;
 import com.greendill.greendillmall.product.service.BrandService;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+//import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
