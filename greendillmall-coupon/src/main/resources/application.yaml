@@ -1,20 +1,20 @@
-spring:
-  datasource:
-    username: Dennis
-    password: Wangyu19950610.
-    url: jdbc:mysql://129.146.45.75:3306/greendillmall_sms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 129.146.45.75:8848
-  application:
-    name: greendillmall-coupon
-mybatis-plus:
-  mapper-locations: classpath*:/mapper/**/*.xml
-  global-config:
-    db-config:
-      id-type: auto
-
-server:
-  port: 8085
+#spring:
+#  datasource:
+#    username: Dennis
+#    password: Wangyu19950610.
+#    url: jdbc:mysql://129.146.45.75:3306/greendillmall_sms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 129.146.45.75:8848
+#  application:
+#    name: greendillmall-coupon
+#mybatis-plus:
+#  mapper-locations: classpath*:/mapper/**/*.xml
+#  global-config:
+#    db-config:
+#      id-type: auto
+#
+#server:
+#  port: 8085
