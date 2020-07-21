@@ -12,29 +12,17 @@
     <artifactId>greendillmall-common</artifactId>
     <description>提供公共依赖</description>
     <build>
-
         <plugins>
-
             <plugin>
-
                 <groupId>org.apache.maven.plugins</groupId>
-
                 <artifactId>maven-compiler-plugin</artifactId>
-
                 <version>3.8.1</version>
-
                 <configuration>
-
                     <source>1.8</source>
-
                     <target>1.8</target>
-
                 </configuration>
-
             </plugin>
-
         </plugins>
-
     </build>
 
     <dependencies>
@@ -81,7 +69,10 @@
             <artifactId>spring-cloud-alibaba-nacos-discovery</artifactId>
         </dependency>
 <!--        -->
-
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
     </dependencies>
     <!--        spring cloud alibaba-->
    <dependencyManagement>
@@ -89,7 +80,7 @@
            <dependency>
                <groupId>com.alibaba.cloud</groupId>
                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-               <version>2.2.0.RELEASE</version>
+               <version>2.1.0.RELEASE</version>
                <type>pom</type>
                <scope>import</scope>
            </dependency>
