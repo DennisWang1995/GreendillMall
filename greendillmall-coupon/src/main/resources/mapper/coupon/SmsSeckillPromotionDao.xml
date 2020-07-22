@@ -3,7 +3,7 @@
 
 <mapper namespace="com.greendill.greendillmall.coupon.dao.SmsSeckillPromotionDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
+    <!-- 可根据自己的需求，是否要使用 -->
     <resultMap type="com.greendill.greendillmall.coupon.entity.SmsSeckillPromotionEntity" id="smsSeckillPromotionMap">
         <result property="id" column="id"/>
         <result property="title" column="title"/>

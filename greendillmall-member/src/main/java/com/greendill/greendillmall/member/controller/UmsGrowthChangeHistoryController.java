@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 成长值变化历史记录
  *
@@ -34,7 +33,7 @@ public class UmsGrowthChangeHistoryController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = umsGrowthChangeHistoryService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class UmsGrowthChangeHistoryController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		UmsGrowthChangeHistoryEntity umsGrowthChangeHistory = umsGrowthChangeHistoryService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        UmsGrowthChangeHistoryEntity umsGrowthChangeHistory = umsGrowthChangeHistoryService.getById(id);
 
         return R.ok().put("umsGrowthChangeHistory", umsGrowthChangeHistory);
     }
@@ -55,8 +54,8 @@ public class UmsGrowthChangeHistoryController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody UmsGrowthChangeHistoryEntity umsGrowthChangeHistory){
-		umsGrowthChangeHistoryService.save(umsGrowthChangeHistory);
+    public R save(@RequestBody UmsGrowthChangeHistoryEntity umsGrowthChangeHistory) {
+        umsGrowthChangeHistoryService.save(umsGrowthChangeHistory);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class UmsGrowthChangeHistoryController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody UmsGrowthChangeHistoryEntity umsGrowthChangeHistory){
-		umsGrowthChangeHistoryService.updateById(umsGrowthChangeHistory);
+    public R update(@RequestBody UmsGrowthChangeHistoryEntity umsGrowthChangeHistory) {
+        umsGrowthChangeHistoryService.updateById(umsGrowthChangeHistory);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class UmsGrowthChangeHistoryController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		umsGrowthChangeHistoryService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        umsGrowthChangeHistoryService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

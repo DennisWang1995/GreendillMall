@@ -5,7 +5,8 @@
 </html>
 <script>
     'use strict';
-    function run () {
+
+    function run() {
         var oauth2 = window.opener.swaggerUIRedirectOauth2;
         var sentState = oauth2.state;
         var redirectUrl = oauth2.redirectUrl;
@@ -14,11 +15,13 @@
         qp = (window.location.hash || location.search).substring(1);
 
         arr = qp.split("&")
-        arr.forEach(function (v,i,_arr) { _arr[i] = '"' + v.replace('=', '":"') + '"';})
+        arr.forEach(function (v, i, _arr) {
+            _arr[i] = '"' + v.replace('=', '":"') + '"';
+        })
         qp = qp ? JSON.parse('{' + arr.join() + '}',
-                function (key, value) {
-                    return key === "" ? value : decodeURIComponent(value)
-                }
+            function (key, value) {
+                return key === "" ? value : decodeURIComponent(value)
+            }
         ) : {}
 
         isValid = qp.state === sentState

@@ -3,14 +3,14 @@
 
 <mapper namespace="io.renren.modules.sys.dao.SysUserRoleDao">
 
-	<delete id="deleteBatch">
-		delete from sys_user_role where role_id in
-		<foreach item="roleId" collection="array" open="(" separator="," close=")">
-			#{roleId}
-		</foreach>
-	</delete>
+    <delete id="deleteBatch">
+        delete from sys_user_role where role_id in
+        <foreach item="roleId" collection="array" open="(" separator="," close=")">
+            #{roleId}
+        </foreach>
+    </delete>
 
-	<select id="queryRoleIdList" resultType="long">
-		select role_id from sys_user_role where user_id = #{value}
-	</select>
+    <select id="queryRoleIdList" resultType="long">
+        select role_id from sys_user_role where user_id = #{value}
+    </select>
 </mapper>

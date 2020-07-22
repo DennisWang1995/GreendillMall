@@ -21,7 +21,7 @@ class GreendillmallProductApplicationTests {
         //////////保存
 //        BrandEntity.setName("xiao mi");
         BrandService.updateById(BrandEntity);
-        System.out.println("保存成功"+BrandEntity);
+        System.out.println("保存成功" + BrandEntity);
     }
 
 }

@@ -18,7 +18,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 优惠券信息
  *
@@ -39,20 +38,22 @@ public class SmsCouponController {
     private Integer age;
 
     @RequestMapping("/test")
-    public R test(){
-        return R.ok().put("name",name).put("age",age);
+    public R test() {
+        return R.ok().put("name", name).put("age", age);
     }
+
     @RequestMapping("/member/list")
-    public R Coupons(){
+    public R Coupons() {
         SmsCouponEntity SmsCouponEntity = new SmsCouponEntity();
         SmsCouponEntity.setCouponName("满100减10");
-        return R.ok().put("coupons",Arrays.asList(SmsCouponEntity));
+        return R.ok().put("coupons", Arrays.asList(SmsCouponEntity));
     }
+
     /**
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = smsCouponService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -63,8 +64,8 @@ public class SmsCouponController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		SmsCouponEntity smsCoupon = smsCouponService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        SmsCouponEntity smsCoupon = smsCouponService.getById(id);
 
         return R.ok().put("smsCoupon", smsCoupon);
     }
@@ -73,8 +74,8 @@ public class SmsCouponController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody SmsCouponEntity smsCoupon){
-		smsCouponService.save(smsCoupon);
+    public R save(@RequestBody SmsCouponEntity smsCoupon) {
+        smsCouponService.save(smsCoupon);
 
         return R.ok();
     }
@@ -83,8 +84,8 @@ public class SmsCouponController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody SmsCouponEntity smsCoupon){
-		smsCouponService.updateById(smsCoupon);
+    public R update(@RequestBody SmsCouponEntity smsCoupon) {
+        smsCouponService.updateById(smsCoupon);
 
         return R.ok();
     }
@@ -93,8 +94,8 @@ public class SmsCouponController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		smsCouponService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        smsCouponService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

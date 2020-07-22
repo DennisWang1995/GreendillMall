@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 订单
  *
@@ -34,7 +33,7 @@ public class OmsOrderController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = omsOrderService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class OmsOrderController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		OmsOrderEntity omsOrder = omsOrderService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        OmsOrderEntity omsOrder = omsOrderService.getById(id);
 
         return R.ok().put("omsOrder", omsOrder);
     }
@@ -55,8 +54,8 @@ public class OmsOrderController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody OmsOrderEntity omsOrder){
-		omsOrderService.save(omsOrder);
+    public R save(@RequestBody OmsOrderEntity omsOrder) {
+        omsOrderService.save(omsOrder);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class OmsOrderController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody OmsOrderEntity omsOrder){
-		omsOrderService.updateById(omsOrder);
+    public R update(@RequestBody OmsOrderEntity omsOrder) {
+        omsOrderService.updateById(omsOrder);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class OmsOrderController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		omsOrderService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        omsOrderService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

@@ -3,7 +3,7 @@
 
 <mapper namespace="com.greendill.greendillmall.ware.dao.WmsPurchaseDetailDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
+    <!-- 可根据自己的需求，是否要使用 -->
     <resultMap type="com.greendill.greendillmall.ware.entity.WmsPurchaseDetailEntity" id="wmsPurchaseDetailMap">
         <result property="id" column="id"/>
         <result property="purchaseId" column="purchase_id"/>

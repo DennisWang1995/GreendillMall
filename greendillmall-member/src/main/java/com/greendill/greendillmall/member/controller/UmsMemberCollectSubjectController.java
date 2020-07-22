@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 会员收藏的专题活动
  *
@@ -34,7 +33,7 @@ public class UmsMemberCollectSubjectController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = umsMemberCollectSubjectService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class UmsMemberCollectSubjectController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		UmsMemberCollectSubjectEntity umsMemberCollectSubject = umsMemberCollectSubjectService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        UmsMemberCollectSubjectEntity umsMemberCollectSubject = umsMemberCollectSubjectService.getById(id);
 
         return R.ok().put("umsMemberCollectSubject", umsMemberCollectSubject);
     }
@@ -55,8 +54,8 @@ public class UmsMemberCollectSubjectController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody UmsMemberCollectSubjectEntity umsMemberCollectSubject){
-		umsMemberCollectSubjectService.save(umsMemberCollectSubject);
+    public R save(@RequestBody UmsMemberCollectSubjectEntity umsMemberCollectSubject) {
+        umsMemberCollectSubjectService.save(umsMemberCollectSubject);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class UmsMemberCollectSubjectController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody UmsMemberCollectSubjectEntity umsMemberCollectSubject){
-		umsMemberCollectSubjectService.updateById(umsMemberCollectSubject);
+    public R update(@RequestBody UmsMemberCollectSubjectEntity umsMemberCollectSubject) {
+        umsMemberCollectSubjectService.updateById(umsMemberCollectSubject);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class UmsMemberCollectSubjectController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		umsMemberCollectSubjectService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        umsMemberCollectSubjectService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

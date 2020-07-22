@@ -3,7 +3,7 @@
 
 <mapper namespace="com.greendill.greendillmall.member.dao.UmsMemberDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
+    <!-- 可根据自己的需求，是否要使用 -->
     <resultMap type="com.greendill.greendillmall.member.entity.UmsMemberEntity" id="umsMemberMap">
         <result property="id" column="id"/>
         <result property="levelId" column="level_id"/>

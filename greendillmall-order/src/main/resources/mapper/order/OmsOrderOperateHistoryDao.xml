@@ -3,8 +3,9 @@
 
 <mapper namespace="com.greendill.greendillmall.order.dao.OmsOrderOperateHistoryDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.greendill.greendillmall.order.entity.OmsOrderOperateHistoryEntity" id="omsOrderOperateHistoryMap">
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.greendill.greendillmall.order.entity.OmsOrderOperateHistoryEntity"
+               id="omsOrderOperateHistoryMap">
         <result property="id" column="id"/>
         <result property="orderId" column="order_id"/>
         <result property="operateMan" column="operate_man"/>

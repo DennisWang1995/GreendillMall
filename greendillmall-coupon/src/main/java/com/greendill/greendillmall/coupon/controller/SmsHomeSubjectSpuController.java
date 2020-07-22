@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 专题商品
  *
@@ -34,7 +33,7 @@ public class SmsHomeSubjectSpuController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = smsHomeSubjectSpuService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class SmsHomeSubjectSpuController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		SmsHomeSubjectSpuEntity smsHomeSubjectSpu = smsHomeSubjectSpuService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        SmsHomeSubjectSpuEntity smsHomeSubjectSpu = smsHomeSubjectSpuService.getById(id);
 
         return R.ok().put("smsHomeSubjectSpu", smsHomeSubjectSpu);
     }
@@ -55,8 +54,8 @@ public class SmsHomeSubjectSpuController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody SmsHomeSubjectSpuEntity smsHomeSubjectSpu){
-		smsHomeSubjectSpuService.save(smsHomeSubjectSpu);
+    public R save(@RequestBody SmsHomeSubjectSpuEntity smsHomeSubjectSpu) {
+        smsHomeSubjectSpuService.save(smsHomeSubjectSpu);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class SmsHomeSubjectSpuController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody SmsHomeSubjectSpuEntity smsHomeSubjectSpu){
-		smsHomeSubjectSpuService.updateById(smsHomeSubjectSpu);
+    public R update(@RequestBody SmsHomeSubjectSpuEntity smsHomeSubjectSpu) {
+        smsHomeSubjectSpuService.updateById(smsHomeSubjectSpu);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class SmsHomeSubjectSpuController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		smsHomeSubjectSpuService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        smsHomeSubjectSpuService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

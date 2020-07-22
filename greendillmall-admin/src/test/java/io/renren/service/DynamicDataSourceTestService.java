@@ -1,8 +1,8 @@
 /**
  * Copyright (c) 2016-2019 人人开源 All rights reserved.
- *
+ * <p>
  * https://www.renren.io
- *
+ * <p>
  * 版权所有，侵权必究！
  */
 
@@ -27,7 +27,7 @@ public class DynamicDataSourceTestService {
     private SysUserDao sysUserDao;
 
     @Transactional
-    public void updateUser(Long id){
+    public void updateUser(Long id) {
         SysUserEntity user = new SysUserEntity();
         user.setUserId(id);
         user.setMobile("13500000000");
@@ -36,7 +36,7 @@ public class DynamicDataSourceTestService {
 
     @Transactional
     @DataSource("slave1")
-    public void updateUserBySlave1(Long id){
+    public void updateUserBySlave1(Long id) {
         SysUserEntity user = new SysUserEntity();
         user.setUserId(id);
         user.setMobile("13500000001");
@@ -45,13 +45,13 @@ public class DynamicDataSourceTestService {
 
     @DataSource("slave2")
     @Transactional
-    public void updateUserBySlave2(Long id){
+    public void updateUserBySlave2(Long id) {
         SysUserEntity user = new SysUserEntity();
         user.setUserId(id);
         user.setMobile("13500000002");
         sysUserDao.updateById(user);
 
         //测试事物
-        int i = 1/0;
+        int i = 1 / 0;
     }
 }

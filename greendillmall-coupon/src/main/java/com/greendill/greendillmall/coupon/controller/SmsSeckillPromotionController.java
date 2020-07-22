@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 秒杀活动
  *
@@ -34,7 +33,7 @@ public class SmsSeckillPromotionController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = smsSeckillPromotionService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class SmsSeckillPromotionController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		SmsSeckillPromotionEntity smsSeckillPromotion = smsSeckillPromotionService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        SmsSeckillPromotionEntity smsSeckillPromotion = smsSeckillPromotionService.getById(id);
 
         return R.ok().put("smsSeckillPromotion", smsSeckillPromotion);
     }
@@ -55,8 +54,8 @@ public class SmsSeckillPromotionController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody SmsSeckillPromotionEntity smsSeckillPromotion){
-		smsSeckillPromotionService.save(smsSeckillPromotion);
+    public R save(@RequestBody SmsSeckillPromotionEntity smsSeckillPromotion) {
+        smsSeckillPromotionService.save(smsSeckillPromotion);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class SmsSeckillPromotionController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody SmsSeckillPromotionEntity smsSeckillPromotion){
-		smsSeckillPromotionService.updateById(smsSeckillPromotion);
+    public R update(@RequestBody SmsSeckillPromotionEntity smsSeckillPromotion) {
+        smsSeckillPromotionService.updateById(smsSeckillPromotion);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class SmsSeckillPromotionController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		smsSeckillPromotionService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        smsSeckillPromotionService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

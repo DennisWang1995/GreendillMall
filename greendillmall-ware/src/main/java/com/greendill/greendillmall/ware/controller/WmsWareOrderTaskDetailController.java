@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 库存工作单
  *
@@ -34,7 +33,7 @@ public class WmsWareOrderTaskDetailController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = wmsWareOrderTaskDetailService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class WmsWareOrderTaskDetailController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		WmsWareOrderTaskDetailEntity wmsWareOrderTaskDetail = wmsWareOrderTaskDetailService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        WmsWareOrderTaskDetailEntity wmsWareOrderTaskDetail = wmsWareOrderTaskDetailService.getById(id);
 
         return R.ok().put("wmsWareOrderTaskDetail", wmsWareOrderTaskDetail);
     }
@@ -55,8 +54,8 @@ public class WmsWareOrderTaskDetailController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody WmsWareOrderTaskDetailEntity wmsWareOrderTaskDetail){
-		wmsWareOrderTaskDetailService.save(wmsWareOrderTaskDetail);
+    public R save(@RequestBody WmsWareOrderTaskDetailEntity wmsWareOrderTaskDetail) {
+        wmsWareOrderTaskDetailService.save(wmsWareOrderTaskDetail);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class WmsWareOrderTaskDetailController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody WmsWareOrderTaskDetailEntity wmsWareOrderTaskDetail){
-		wmsWareOrderTaskDetailService.updateById(wmsWareOrderTaskDetail);
+    public R update(@RequestBody WmsWareOrderTaskDetailEntity wmsWareOrderTaskDetail) {
+        wmsWareOrderTaskDetailService.updateById(wmsWareOrderTaskDetail);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class WmsWareOrderTaskDetailController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		wmsWareOrderTaskDetailService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        wmsWareOrderTaskDetailService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

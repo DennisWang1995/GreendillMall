@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 仓库信息
  *
@@ -34,7 +33,7 @@ public class WmsWareInfoController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = wmsWareInfoService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class WmsWareInfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		WmsWareInfoEntity wmsWareInfo = wmsWareInfoService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        WmsWareInfoEntity wmsWareInfo = wmsWareInfoService.getById(id);
 
         return R.ok().put("wmsWareInfo", wmsWareInfo);
     }
@@ -55,8 +54,8 @@ public class WmsWareInfoController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody WmsWareInfoEntity wmsWareInfo){
-		wmsWareInfoService.save(wmsWareInfo);
+    public R save(@RequestBody WmsWareInfoEntity wmsWareInfo) {
+        wmsWareInfoService.save(wmsWareInfo);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class WmsWareInfoController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody WmsWareInfoEntity wmsWareInfo){
-		wmsWareInfoService.updateById(wmsWareInfo);
+    public R update(@RequestBody WmsWareInfoEntity wmsWareInfo) {
+        wmsWareInfoService.updateById(wmsWareInfo);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class WmsWareInfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		wmsWareInfoService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        wmsWareInfoService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

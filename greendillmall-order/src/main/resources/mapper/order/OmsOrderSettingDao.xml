@@ -3,7 +3,7 @@
 
 <mapper namespace="com.greendill.greendillmall.order.dao.OmsOrderSettingDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
+    <!-- 可根据自己的需求，是否要使用 -->
     <resultMap type="com.greendill.greendillmall.order.entity.OmsOrderSettingEntity" id="omsOrderSettingMap">
         <result property="id" column="id"/>
         <result property="flashOrderOvertime" column="flash_order_overtime"/>

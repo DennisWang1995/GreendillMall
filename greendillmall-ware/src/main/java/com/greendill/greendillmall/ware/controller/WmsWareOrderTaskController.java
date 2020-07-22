@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 库存工作单
  *
@@ -34,7 +33,7 @@ public class WmsWareOrderTaskController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = wmsWareOrderTaskService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class WmsWareOrderTaskController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		WmsWareOrderTaskEntity wmsWareOrderTask = wmsWareOrderTaskService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        WmsWareOrderTaskEntity wmsWareOrderTask = wmsWareOrderTaskService.getById(id);
 
         return R.ok().put("wmsWareOrderTask", wmsWareOrderTask);
     }
@@ -55,8 +54,8 @@ public class WmsWareOrderTaskController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody WmsWareOrderTaskEntity wmsWareOrderTask){
-		wmsWareOrderTaskService.save(wmsWareOrderTask);
+    public R save(@RequestBody WmsWareOrderTaskEntity wmsWareOrderTask) {
+        wmsWareOrderTaskService.save(wmsWareOrderTask);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class WmsWareOrderTaskController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody WmsWareOrderTaskEntity wmsWareOrderTask){
-		wmsWareOrderTaskService.updateById(wmsWareOrderTask);
+    public R update(@RequestBody WmsWareOrderTaskEntity wmsWareOrderTask) {
+        wmsWareOrderTaskService.updateById(wmsWareOrderTask);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class WmsWareOrderTaskController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		wmsWareOrderTaskService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        wmsWareOrderTaskService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

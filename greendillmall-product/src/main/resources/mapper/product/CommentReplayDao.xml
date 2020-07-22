@@ -3,7 +3,7 @@
 
 <mapper namespace="com.greendill.greendillmall.product.dao.CommentReplayDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
+    <!-- 可根据自己的需求，是否要使用 -->
     <resultMap type="com.greendill.greendillmall.product.entity.CommentReplayEntity" id="commentReplayMap">
         <result property="id" column="id"/>
         <result property="commentId" column="comment_id"/>

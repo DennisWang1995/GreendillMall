@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 商品满减信息
  *
@@ -34,7 +33,7 @@ public class SmsSkuFullReductionController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = smsSkuFullReductionService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class SmsSkuFullReductionController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		SmsSkuFullReductionEntity smsSkuFullReduction = smsSkuFullReductionService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        SmsSkuFullReductionEntity smsSkuFullReduction = smsSkuFullReductionService.getById(id);
 
         return R.ok().put("smsSkuFullReduction", smsSkuFullReduction);
     }
@@ -55,8 +54,8 @@ public class SmsSkuFullReductionController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody SmsSkuFullReductionEntity smsSkuFullReduction){
-		smsSkuFullReductionService.save(smsSkuFullReduction);
+    public R save(@RequestBody SmsSkuFullReductionEntity smsSkuFullReduction) {
+        smsSkuFullReductionService.save(smsSkuFullReduction);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class SmsSkuFullReductionController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody SmsSkuFullReductionEntity smsSkuFullReduction){
-		smsSkuFullReductionService.updateById(smsSkuFullReduction);
+    public R update(@RequestBody SmsSkuFullReductionEntity smsSkuFullReduction) {
+        smsSkuFullReductionService.updateById(smsSkuFullReduction);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class SmsSkuFullReductionController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		smsSkuFullReductionService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        smsSkuFullReductionService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

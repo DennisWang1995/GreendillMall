@@ -3,8 +3,9 @@
 
 <mapper namespace="com.greendill.greendillmall.member.dao.UmsGrowthChangeHistoryDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.greendill.greendillmall.member.entity.UmsGrowthChangeHistoryEntity" id="umsGrowthChangeHistoryMap">
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.greendill.greendillmall.member.entity.UmsGrowthChangeHistoryEntity"
+               id="umsGrowthChangeHistoryMap">
         <result property="id" column="id"/>
         <result property="memberId" column="member_id"/>
         <result property="createTime" column="create_time"/>

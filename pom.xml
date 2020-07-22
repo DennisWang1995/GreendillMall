@@ -18,7 +18,7 @@
         <module>greendillmall-common</module>
         <module>greendillmall-admin</module>
         <module>greendillmall-generator</module>
-
+        <module>greendillmall-gateway</module>
     </modules>
 
 </project>

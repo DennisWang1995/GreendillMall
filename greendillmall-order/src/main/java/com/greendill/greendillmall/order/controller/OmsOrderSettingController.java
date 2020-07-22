@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 订单配置信息
  *
@@ -34,7 +33,7 @@ public class OmsOrderSettingController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = omsOrderSettingService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class OmsOrderSettingController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		OmsOrderSettingEntity omsOrderSetting = omsOrderSettingService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        OmsOrderSettingEntity omsOrderSetting = omsOrderSettingService.getById(id);
 
         return R.ok().put("omsOrderSetting", omsOrderSetting);
     }
@@ -55,8 +54,8 @@ public class OmsOrderSettingController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody OmsOrderSettingEntity omsOrderSetting){
-		omsOrderSettingService.save(omsOrderSetting);
+    public R save(@RequestBody OmsOrderSettingEntity omsOrderSetting) {
+        omsOrderSettingService.save(omsOrderSetting);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class OmsOrderSettingController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody OmsOrderSettingEntity omsOrderSetting){
-		omsOrderSettingService.updateById(omsOrderSetting);
+    public R update(@RequestBody OmsOrderSettingEntity omsOrderSetting) {
+        omsOrderSettingService.updateById(omsOrderSetting);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class OmsOrderSettingController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		omsOrderSettingService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        omsOrderSettingService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

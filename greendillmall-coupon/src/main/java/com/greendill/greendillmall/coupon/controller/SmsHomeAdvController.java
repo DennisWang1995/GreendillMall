@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 首页轮播广告
  *
@@ -34,7 +33,7 @@ public class SmsHomeAdvController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = smsHomeAdvService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class SmsHomeAdvController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		SmsHomeAdvEntity smsHomeAdv = smsHomeAdvService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        SmsHomeAdvEntity smsHomeAdv = smsHomeAdvService.getById(id);
 
         return R.ok().put("smsHomeAdv", smsHomeAdv);
     }
@@ -55,8 +54,8 @@ public class SmsHomeAdvController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody SmsHomeAdvEntity smsHomeAdv){
-		smsHomeAdvService.save(smsHomeAdv);
+    public R save(@RequestBody SmsHomeAdvEntity smsHomeAdv) {
+        smsHomeAdvService.save(smsHomeAdv);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class SmsHomeAdvController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody SmsHomeAdvEntity smsHomeAdv){
-		smsHomeAdvService.updateById(smsHomeAdv);
+    public R update(@RequestBody SmsHomeAdvEntity smsHomeAdv) {
+        smsHomeAdvService.updateById(smsHomeAdv);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class SmsHomeAdvController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		smsHomeAdvService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        smsHomeAdvService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

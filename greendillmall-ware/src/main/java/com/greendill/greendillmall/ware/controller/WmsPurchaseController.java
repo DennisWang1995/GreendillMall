@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 采购信息
  *
@@ -34,7 +33,7 @@ public class WmsPurchaseController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = wmsPurchaseService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class WmsPurchaseController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		WmsPurchaseEntity wmsPurchase = wmsPurchaseService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        WmsPurchaseEntity wmsPurchase = wmsPurchaseService.getById(id);
 
         return R.ok().put("wmsPurchase", wmsPurchase);
     }
@@ -55,8 +54,8 @@ public class WmsPurchaseController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody WmsPurchaseEntity wmsPurchase){
-		wmsPurchaseService.save(wmsPurchase);
+    public R save(@RequestBody WmsPurchaseEntity wmsPurchase) {
+        wmsPurchaseService.save(wmsPurchase);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class WmsPurchaseController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody WmsPurchaseEntity wmsPurchase){
-		wmsPurchaseService.updateById(wmsPurchase);
+    public R update(@RequestBody WmsPurchaseEntity wmsPurchase) {
+        wmsPurchaseService.updateById(wmsPurchase);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class WmsPurchaseController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		wmsPurchaseService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        wmsPurchaseService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

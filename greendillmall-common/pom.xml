@@ -26,49 +26,49 @@
     </build>
 
     <dependencies>
-<!--        mybatis-plus-->
+        <!--        mybatis-plus-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.2.0</version>
         </dependency>
-<!--        -->
+        <!--        -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.17</version>
         </dependency>
-<!--        -->
+        <!--        -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.8</version>
         </dependency>
-<!--        -->
+        <!--        -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
             <version>4.4.12</version>
         </dependency>
-<!--        -->
+        <!--        -->
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
             <version>2.6</version>
         </dependency>
-<!--        -->
+        <!--        -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
             <scope>provided</scope>
         </dependency>
-<!---->
+        <!---->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-nacos-discovery</artifactId>
         </dependency>
-<!--        -->
+        <!--        -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
@@ -76,17 +76,17 @@
 
     </dependencies>
     <!--        spring cloud alibaba-->
-   <dependencyManagement>
-       <dependencies>
-           <dependency>
-               <groupId>com.alibaba.cloud</groupId>
-               <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-               <version>2.1.0.RELEASE</version>
-               <type>pom</type>
-               <scope>import</scope>
-           </dependency>
-       </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.1.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
 
-   </dependencyManagement>
+    </dependencyManagement>
 
 </project>

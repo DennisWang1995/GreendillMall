@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 会员登录记录
  *
@@ -34,7 +33,7 @@ public class UmsMemberLoginLogController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = umsMemberLoginLogService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class UmsMemberLoginLogController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		UmsMemberLoginLogEntity umsMemberLoginLog = umsMemberLoginLogService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        UmsMemberLoginLogEntity umsMemberLoginLog = umsMemberLoginLogService.getById(id);
 
         return R.ok().put("umsMemberLoginLog", umsMemberLoginLog);
     }
@@ -55,8 +54,8 @@ public class UmsMemberLoginLogController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody UmsMemberLoginLogEntity umsMemberLoginLog){
-		umsMemberLoginLogService.save(umsMemberLoginLog);
+    public R save(@RequestBody UmsMemberLoginLogEntity umsMemberLoginLog) {
+        umsMemberLoginLogService.save(umsMemberLoginLog);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class UmsMemberLoginLogController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody UmsMemberLoginLogEntity umsMemberLoginLog){
-		umsMemberLoginLogService.updateById(umsMemberLoginLog);
+    public R update(@RequestBody UmsMemberLoginLogEntity umsMemberLoginLog) {
+        umsMemberLoginLogService.updateById(umsMemberLoginLog);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class UmsMemberLoginLogController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		umsMemberLoginLogService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        umsMemberLoginLogService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

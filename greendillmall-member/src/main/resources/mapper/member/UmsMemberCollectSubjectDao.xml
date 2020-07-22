@@ -3,8 +3,9 @@
 
 <mapper namespace="com.greendill.greendillmall.member.dao.UmsMemberCollectSubjectDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.greendill.greendillmall.member.entity.UmsMemberCollectSubjectEntity" id="umsMemberCollectSubjectMap">
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.greendill.greendillmall.member.entity.UmsMemberCollectSubjectEntity"
+               id="umsMemberCollectSubjectMap">
         <result property="id" column="id"/>
         <result property="subjectId" column="subject_id"/>
         <result property="subjectName" column="subject_name"/>

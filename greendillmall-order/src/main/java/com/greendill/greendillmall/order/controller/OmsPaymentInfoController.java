@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 支付信息表
  *
@@ -34,7 +33,7 @@ public class OmsPaymentInfoController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = omsPaymentInfoService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class OmsPaymentInfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		OmsPaymentInfoEntity omsPaymentInfo = omsPaymentInfoService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        OmsPaymentInfoEntity omsPaymentInfo = omsPaymentInfoService.getById(id);
 
         return R.ok().put("omsPaymentInfo", omsPaymentInfo);
     }
@@ -55,8 +54,8 @@ public class OmsPaymentInfoController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody OmsPaymentInfoEntity omsPaymentInfo){
-		omsPaymentInfoService.save(omsPaymentInfo);
+    public R save(@RequestBody OmsPaymentInfoEntity omsPaymentInfo) {
+        omsPaymentInfoService.save(omsPaymentInfo);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class OmsPaymentInfoController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody OmsPaymentInfoEntity omsPaymentInfo){
-		omsPaymentInfoService.updateById(omsPaymentInfo);
+    public R update(@RequestBody OmsPaymentInfoEntity omsPaymentInfo) {
+        omsPaymentInfoService.updateById(omsPaymentInfo);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class OmsPaymentInfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		omsPaymentInfoService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        omsPaymentInfoService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

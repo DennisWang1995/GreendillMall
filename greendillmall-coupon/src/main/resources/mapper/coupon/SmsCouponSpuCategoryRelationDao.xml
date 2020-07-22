@@ -3,8 +3,9 @@
 
 <mapper namespace="com.greendill.greendillmall.coupon.dao.SmsCouponSpuCategoryRelationDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.greendill.greendillmall.coupon.entity.SmsCouponSpuCategoryRelationEntity" id="smsCouponSpuCategoryRelationMap">
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.greendill.greendillmall.coupon.entity.SmsCouponSpuCategoryRelationEntity"
+               id="smsCouponSpuCategoryRelationMap">
         <result property="id" column="id"/>
         <result property="couponId" column="coupon_id"/>
         <result property="categoryId" column="category_id"/>

@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 会员等级
  *
@@ -34,7 +33,7 @@ public class UmsMemberLevelController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = umsMemberLevelService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class UmsMemberLevelController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		UmsMemberLevelEntity umsMemberLevel = umsMemberLevelService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        UmsMemberLevelEntity umsMemberLevel = umsMemberLevelService.getById(id);
 
         return R.ok().put("umsMemberLevel", umsMemberLevel);
     }
@@ -55,8 +54,8 @@ public class UmsMemberLevelController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody UmsMemberLevelEntity umsMemberLevel){
-		umsMemberLevelService.save(umsMemberLevel);
+    public R save(@RequestBody UmsMemberLevelEntity umsMemberLevel) {
+        umsMemberLevelService.save(umsMemberLevel);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class UmsMemberLevelController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody UmsMemberLevelEntity umsMemberLevel){
-		umsMemberLevelService.updateById(umsMemberLevel);
+    public R update(@RequestBody UmsMemberLevelEntity umsMemberLevel) {
+        umsMemberLevelService.updateById(umsMemberLevel);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class UmsMemberLevelController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		umsMemberLevelService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        umsMemberLevelService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

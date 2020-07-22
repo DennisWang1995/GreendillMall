@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 商品评价回复关系
  *
@@ -35,7 +34,7 @@ public class CommentReplayController {
      */
     @RequestMapping("/list")
 //   @RequiresPermissions("product:commentreplay:list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = commentReplayService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -47,8 +46,8 @@ public class CommentReplayController {
      */
     @RequestMapping("/info/{id}")
 
-    public R info(@PathVariable("id") Long id){
-		CommentReplayEntity commentReplay = commentReplayService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        CommentReplayEntity commentReplay = commentReplayService.getById(id);
 
         return R.ok().put("commentReplay", commentReplay);
     }
@@ -58,8 +57,8 @@ public class CommentReplayController {
      */
     @RequestMapping("/save")
 
-    public R save(@RequestBody CommentReplayEntity commentReplay){
-		commentReplayService.save(commentReplay);
+    public R save(@RequestBody CommentReplayEntity commentReplay) {
+        commentReplayService.save(commentReplay);
 
         return R.ok();
     }
@@ -69,8 +68,8 @@ public class CommentReplayController {
      */
     @RequestMapping("/update")
 
-    public R update(@RequestBody CommentReplayEntity commentReplay){
-		commentReplayService.updateById(commentReplay);
+    public R update(@RequestBody CommentReplayEntity commentReplay) {
+        commentReplayService.updateById(commentReplay);
 
         return R.ok();
     }
@@ -80,8 +79,8 @@ public class CommentReplayController {
      */
     @RequestMapping("/delete")
 
-    public R delete(@RequestBody Long[] ids){
-		commentReplayService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        commentReplayService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

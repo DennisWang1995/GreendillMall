@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 订单退货申请
  *
@@ -34,7 +33,7 @@ public class OmsOrderReturnApplyController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = omsOrderReturnApplyService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class OmsOrderReturnApplyController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		OmsOrderReturnApplyEntity omsOrderReturnApply = omsOrderReturnApplyService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        OmsOrderReturnApplyEntity omsOrderReturnApply = omsOrderReturnApplyService.getById(id);
 
         return R.ok().put("omsOrderReturnApply", omsOrderReturnApply);
     }
@@ -55,8 +54,8 @@ public class OmsOrderReturnApplyController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody OmsOrderReturnApplyEntity omsOrderReturnApply){
-		omsOrderReturnApplyService.save(omsOrderReturnApply);
+    public R save(@RequestBody OmsOrderReturnApplyEntity omsOrderReturnApply) {
+        omsOrderReturnApplyService.save(omsOrderReturnApply);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class OmsOrderReturnApplyController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody OmsOrderReturnApplyEntity omsOrderReturnApply){
-		omsOrderReturnApplyService.updateById(omsOrderReturnApply);
+    public R update(@RequestBody OmsOrderReturnApplyEntity omsOrderReturnApply) {
+        omsOrderReturnApplyService.updateById(omsOrderReturnApply);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class OmsOrderReturnApplyController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		omsOrderReturnApplyService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        omsOrderReturnApplyService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

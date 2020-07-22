@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 优惠券领取历史记录
  *
@@ -34,7 +33,7 @@ public class SmsCouponHistoryController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = smsCouponHistoryService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class SmsCouponHistoryController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		SmsCouponHistoryEntity smsCouponHistory = smsCouponHistoryService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        SmsCouponHistoryEntity smsCouponHistory = smsCouponHistoryService.getById(id);
 
         return R.ok().put("smsCouponHistory", smsCouponHistory);
     }
@@ -55,8 +54,8 @@ public class SmsCouponHistoryController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody SmsCouponHistoryEntity smsCouponHistory){
-		smsCouponHistoryService.save(smsCouponHistory);
+    public R save(@RequestBody SmsCouponHistoryEntity smsCouponHistory) {
+        smsCouponHistoryService.save(smsCouponHistory);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class SmsCouponHistoryController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody SmsCouponHistoryEntity smsCouponHistory){
-		smsCouponHistoryService.updateById(smsCouponHistory);
+    public R update(@RequestBody SmsCouponHistoryEntity smsCouponHistory) {
+        smsCouponHistoryService.updateById(smsCouponHistory);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class SmsCouponHistoryController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		smsCouponHistoryService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        smsCouponHistoryService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

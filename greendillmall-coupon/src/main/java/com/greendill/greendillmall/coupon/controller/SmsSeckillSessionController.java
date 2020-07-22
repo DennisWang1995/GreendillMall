@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 秒杀活动场次
  *
@@ -34,7 +33,7 @@ public class SmsSeckillSessionController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = smsSeckillSessionService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class SmsSeckillSessionController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		SmsSeckillSessionEntity smsSeckillSession = smsSeckillSessionService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        SmsSeckillSessionEntity smsSeckillSession = smsSeckillSessionService.getById(id);
 
         return R.ok().put("smsSeckillSession", smsSeckillSession);
     }
@@ -55,8 +54,8 @@ public class SmsSeckillSessionController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody SmsSeckillSessionEntity smsSeckillSession){
-		smsSeckillSessionService.save(smsSeckillSession);
+    public R save(@RequestBody SmsSeckillSessionEntity smsSeckillSession) {
+        smsSeckillSessionService.save(smsSeckillSession);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class SmsSeckillSessionController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody SmsSeckillSessionEntity smsSeckillSession){
-		smsSeckillSessionService.updateById(smsSeckillSession);
+    public R update(@RequestBody SmsSeckillSessionEntity smsSeckillSession) {
+        smsSeckillSessionService.updateById(smsSeckillSession);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class SmsSeckillSessionController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		smsSeckillSessionService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        smsSeckillSessionService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

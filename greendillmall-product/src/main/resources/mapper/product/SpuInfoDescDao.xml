@@ -3,7 +3,7 @@
 
 <mapper namespace="com.greendill.greendillmall.product.dao.SpuInfoDescDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
+    <!-- 可根据自己的需求，是否要使用 -->
     <resultMap type="com.greendill.greendillmall.product.entity.SpuInfoDescEntity" id="spuInfoDescMap">
         <result property="spuId" column="spu_id"/>
         <result property="decript" column="decript"/>

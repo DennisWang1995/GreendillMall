@@ -6,12 +6,12 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 会员收藏的商品
- * 
+ *
  * @author Dennis Wang
  * @email Dennis.june@outlook.com
  * @date 2020-07-20 16:24:32
  */
 @Mapper
 public interface UmsMemberCollectSpuDao extends BaseMapper<UmsMemberCollectSpuEntity> {
-	
+
 }

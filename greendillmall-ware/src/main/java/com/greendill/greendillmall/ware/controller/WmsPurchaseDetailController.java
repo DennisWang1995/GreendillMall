@@ -16,10 +16,7 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
- * 
- *
  * @author Dennis Wang
  * @email Dennis.june@outlook.com
  * @date 2020-07-20 16:38:49
@@ -34,7 +31,7 @@ public class WmsPurchaseDetailController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = wmsPurchaseDetailService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +42,8 @@ public class WmsPurchaseDetailController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		WmsPurchaseDetailEntity wmsPurchaseDetail = wmsPurchaseDetailService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        WmsPurchaseDetailEntity wmsPurchaseDetail = wmsPurchaseDetailService.getById(id);
 
         return R.ok().put("wmsPurchaseDetail", wmsPurchaseDetail);
     }
@@ -55,8 +52,8 @@ public class WmsPurchaseDetailController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody WmsPurchaseDetailEntity wmsPurchaseDetail){
-		wmsPurchaseDetailService.save(wmsPurchaseDetail);
+    public R save(@RequestBody WmsPurchaseDetailEntity wmsPurchaseDetail) {
+        wmsPurchaseDetailService.save(wmsPurchaseDetail);
 
         return R.ok();
     }
@@ -65,8 +62,8 @@ public class WmsPurchaseDetailController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody WmsPurchaseDetailEntity wmsPurchaseDetail){
-		wmsPurchaseDetailService.updateById(wmsPurchaseDetail);
+    public R update(@RequestBody WmsPurchaseDetailEntity wmsPurchaseDetail) {
+        wmsPurchaseDetailService.updateById(wmsPurchaseDetail);
 
         return R.ok();
     }
@@ -75,8 +72,8 @@ public class WmsPurchaseDetailController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		wmsPurchaseDetailService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        wmsPurchaseDetailService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

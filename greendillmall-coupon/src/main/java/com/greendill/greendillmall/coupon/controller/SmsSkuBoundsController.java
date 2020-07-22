@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 商品sku积分设置
  *
@@ -34,7 +33,7 @@ public class SmsSkuBoundsController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = smsSkuBoundsService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class SmsSkuBoundsController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		SmsSkuBoundsEntity smsSkuBounds = smsSkuBoundsService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        SmsSkuBoundsEntity smsSkuBounds = smsSkuBoundsService.getById(id);
 
         return R.ok().put("smsSkuBounds", smsSkuBounds);
     }
@@ -55,8 +54,8 @@ public class SmsSkuBoundsController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody SmsSkuBoundsEntity smsSkuBounds){
-		smsSkuBoundsService.save(smsSkuBounds);
+    public R save(@RequestBody SmsSkuBoundsEntity smsSkuBounds) {
+        smsSkuBoundsService.save(smsSkuBounds);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class SmsSkuBoundsController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody SmsSkuBoundsEntity smsSkuBounds){
-		smsSkuBoundsService.updateById(smsSkuBounds);
+    public R update(@RequestBody SmsSkuBoundsEntity smsSkuBounds) {
+        smsSkuBoundsService.updateById(smsSkuBounds);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class SmsSkuBoundsController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		smsSkuBoundsService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        smsSkuBoundsService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

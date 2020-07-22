@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 退货原因
  *
@@ -34,7 +33,7 @@ public class OmsOrderReturnReasonController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = omsOrderReturnReasonService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class OmsOrderReturnReasonController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		OmsOrderReturnReasonEntity omsOrderReturnReason = omsOrderReturnReasonService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        OmsOrderReturnReasonEntity omsOrderReturnReason = omsOrderReturnReasonService.getById(id);
 
         return R.ok().put("omsOrderReturnReason", omsOrderReturnReason);
     }
@@ -55,8 +54,8 @@ public class OmsOrderReturnReasonController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody OmsOrderReturnReasonEntity omsOrderReturnReason){
-		omsOrderReturnReasonService.save(omsOrderReturnReason);
+    public R save(@RequestBody OmsOrderReturnReasonEntity omsOrderReturnReason) {
+        omsOrderReturnReasonService.save(omsOrderReturnReason);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class OmsOrderReturnReasonController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody OmsOrderReturnReasonEntity omsOrderReturnReason){
-		omsOrderReturnReasonService.updateById(omsOrderReturnReason);
+    public R update(@RequestBody OmsOrderReturnReasonEntity omsOrderReturnReason) {
+        omsOrderReturnReasonService.updateById(omsOrderReturnReason);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class OmsOrderReturnReasonController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		omsOrderReturnReasonService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        omsOrderReturnReasonService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

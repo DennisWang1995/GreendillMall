@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 退款信息
  *
@@ -34,7 +33,7 @@ public class OmsRefundInfoController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = omsRefundInfoService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class OmsRefundInfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		OmsRefundInfoEntity omsRefundInfo = omsRefundInfoService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        OmsRefundInfoEntity omsRefundInfo = omsRefundInfoService.getById(id);
 
         return R.ok().put("omsRefundInfo", omsRefundInfo);
     }
@@ -55,8 +54,8 @@ public class OmsRefundInfoController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody OmsRefundInfoEntity omsRefundInfo){
-		omsRefundInfoService.save(omsRefundInfo);
+    public R save(@RequestBody OmsRefundInfoEntity omsRefundInfo) {
+        omsRefundInfoService.save(omsRefundInfo);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class OmsRefundInfoController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody OmsRefundInfoEntity omsRefundInfo){
-		omsRefundInfoService.updateById(omsRefundInfo);
+    public R update(@RequestBody OmsRefundInfoEntity omsRefundInfo) {
+        omsRefundInfoService.updateById(omsRefundInfo);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class OmsRefundInfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		omsRefundInfoService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        omsRefundInfoService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

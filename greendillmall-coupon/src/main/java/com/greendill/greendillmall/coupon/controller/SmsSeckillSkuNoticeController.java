@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 秒杀商品通知订阅
  *
@@ -34,7 +33,7 @@ public class SmsSeckillSkuNoticeController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = smsSeckillSkuNoticeService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class SmsSeckillSkuNoticeController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		SmsSeckillSkuNoticeEntity smsSeckillSkuNotice = smsSeckillSkuNoticeService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        SmsSeckillSkuNoticeEntity smsSeckillSkuNotice = smsSeckillSkuNoticeService.getById(id);
 
         return R.ok().put("smsSeckillSkuNotice", smsSeckillSkuNotice);
     }
@@ -55,8 +54,8 @@ public class SmsSeckillSkuNoticeController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody SmsSeckillSkuNoticeEntity smsSeckillSkuNotice){
-		smsSeckillSkuNoticeService.save(smsSeckillSkuNotice);
+    public R save(@RequestBody SmsSeckillSkuNoticeEntity smsSeckillSkuNotice) {
+        smsSeckillSkuNoticeService.save(smsSeckillSkuNotice);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class SmsSeckillSkuNoticeController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody SmsSeckillSkuNoticeEntity smsSeckillSkuNotice){
-		smsSeckillSkuNoticeService.updateById(smsSeckillSkuNotice);
+    public R update(@RequestBody SmsSeckillSkuNoticeEntity smsSeckillSkuNotice) {
+        smsSeckillSkuNoticeService.updateById(smsSeckillSkuNotice);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class SmsSeckillSkuNoticeController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		smsSeckillSkuNoticeService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        smsSeckillSkuNoticeService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

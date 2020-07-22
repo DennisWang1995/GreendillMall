@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 会员收藏的商品
  *
@@ -34,7 +33,7 @@ public class UmsMemberCollectSpuController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = umsMemberCollectSpuService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class UmsMemberCollectSpuController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		UmsMemberCollectSpuEntity umsMemberCollectSpu = umsMemberCollectSpuService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        UmsMemberCollectSpuEntity umsMemberCollectSpu = umsMemberCollectSpuService.getById(id);
 
         return R.ok().put("umsMemberCollectSpu", umsMemberCollectSpu);
     }
@@ -55,8 +54,8 @@ public class UmsMemberCollectSpuController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody UmsMemberCollectSpuEntity umsMemberCollectSpu){
-		umsMemberCollectSpuService.save(umsMemberCollectSpu);
+    public R save(@RequestBody UmsMemberCollectSpuEntity umsMemberCollectSpu) {
+        umsMemberCollectSpuService.save(umsMemberCollectSpu);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class UmsMemberCollectSpuController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody UmsMemberCollectSpuEntity umsMemberCollectSpu){
-		umsMemberCollectSpuService.updateById(umsMemberCollectSpu);
+    public R update(@RequestBody UmsMemberCollectSpuEntity umsMemberCollectSpu) {
+        umsMemberCollectSpuService.updateById(umsMemberCollectSpu);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class UmsMemberCollectSpuController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		umsMemberCollectSpuService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        umsMemberCollectSpuService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 会员统计信息
  *
@@ -34,7 +33,7 @@ public class UmsMemberStatisticsInfoController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = umsMemberStatisticsInfoService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class UmsMemberStatisticsInfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		UmsMemberStatisticsInfoEntity umsMemberStatisticsInfo = umsMemberStatisticsInfoService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        UmsMemberStatisticsInfoEntity umsMemberStatisticsInfo = umsMemberStatisticsInfoService.getById(id);
 
         return R.ok().put("umsMemberStatisticsInfo", umsMemberStatisticsInfo);
     }
@@ -55,8 +54,8 @@ public class UmsMemberStatisticsInfoController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody UmsMemberStatisticsInfoEntity umsMemberStatisticsInfo){
-		umsMemberStatisticsInfoService.save(umsMemberStatisticsInfo);
+    public R save(@RequestBody UmsMemberStatisticsInfoEntity umsMemberStatisticsInfo) {
+        umsMemberStatisticsInfoService.save(umsMemberStatisticsInfo);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class UmsMemberStatisticsInfoController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody UmsMemberStatisticsInfoEntity umsMemberStatisticsInfo){
-		umsMemberStatisticsInfoService.updateById(umsMemberStatisticsInfo);
+    public R update(@RequestBody UmsMemberStatisticsInfoEntity umsMemberStatisticsInfo) {
+        umsMemberStatisticsInfoService.updateById(umsMemberStatisticsInfo);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class UmsMemberStatisticsInfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		umsMemberStatisticsInfoService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        umsMemberStatisticsInfoService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

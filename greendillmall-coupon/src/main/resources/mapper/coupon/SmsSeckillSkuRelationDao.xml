@@ -3,8 +3,9 @@
 
 <mapper namespace="com.greendill.greendillmall.coupon.dao.SmsSeckillSkuRelationDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.greendill.greendillmall.coupon.entity.SmsSeckillSkuRelationEntity" id="smsSeckillSkuRelationMap">
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.greendill.greendillmall.coupon.entity.SmsSeckillSkuRelationEntity"
+               id="smsSeckillSkuRelationMap">
         <result property="id" column="id"/>
         <result property="promotionId" column="promotion_id"/>
         <result property="promotionSessionId" column="promotion_session_id"/>

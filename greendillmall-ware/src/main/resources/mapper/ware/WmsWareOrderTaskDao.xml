@@ -3,7 +3,7 @@
 
 <mapper namespace="com.greendill.greendillmall.ware.dao.WmsWareOrderTaskDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
+    <!-- 可根据自己的需求，是否要使用 -->
     <resultMap type="com.greendill.greendillmall.ware.entity.WmsWareOrderTaskEntity" id="wmsWareOrderTaskMap">
         <result property="id" column="id"/>
         <result property="orderId" column="order_id"/>

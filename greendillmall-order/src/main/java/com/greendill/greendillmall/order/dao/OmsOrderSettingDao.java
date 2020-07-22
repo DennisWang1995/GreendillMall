@@ -6,12 +6,12 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 订单配置信息
- * 
+ *
  * @author Dennis Wang
  * @email Dennis.june@outlook.com
  * @date 2020-07-20 16:32:44
  */
 @Mapper
 public interface OmsOrderSettingDao extends BaseMapper<OmsOrderSettingEntity> {
-	
+
 }

@@ -6,12 +6,12 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 商品评价回复关系
- * 
+ *
  * @author Dennis Wang
  * @email Dennis.june@outlook.com
  * @date 2020-07-20 14:20:54
  */
 @Mapper
 public interface CommentReplayDao extends BaseMapper<CommentReplayEntity> {
-	
+
 }

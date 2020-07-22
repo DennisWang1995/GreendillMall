@@ -3,7 +3,7 @@
 
 <mapper namespace="com.greendill.greendillmall.coupon.dao.SmsSkuFullReductionDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
+    <!-- 可根据自己的需求，是否要使用 -->
     <resultMap type="com.greendill.greendillmall.coupon.entity.SmsSkuFullReductionEntity" id="smsSkuFullReductionMap">
         <result property="id" column="id"/>
         <result property="skuId" column="sku_id"/>

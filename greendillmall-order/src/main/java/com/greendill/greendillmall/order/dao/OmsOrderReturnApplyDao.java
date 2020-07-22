@@ -6,12 +6,12 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 订单退货申请
- * 
+ *
  * @author Dennis Wang
  * @email Dennis.june@outlook.com
  * @date 2020-07-20 16:32:44
  */
 @Mapper
 public interface OmsOrderReturnApplyDao extends BaseMapper<OmsOrderReturnApplyEntity> {
-	
+
 }

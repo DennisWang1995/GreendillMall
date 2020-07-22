@@ -16,7 +16,6 @@ import com.greendill.common.utils.PageUtils;
 import com.greendill.common.utils.R;
 
 
-
 /**
  * 商品分类积分设置
  *
@@ -34,7 +33,7 @@ public class SmsCategoryBoundsController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = smsCategoryBoundsService.queryPage(params);
 
         return R.ok().put("page", page);
@@ -45,8 +44,8 @@ public class SmsCategoryBoundsController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    public R info(@PathVariable("id") Long id){
-		SmsCategoryBoundsEntity smsCategoryBounds = smsCategoryBoundsService.getById(id);
+    public R info(@PathVariable("id") Long id) {
+        SmsCategoryBoundsEntity smsCategoryBounds = smsCategoryBoundsService.getById(id);
 
         return R.ok().put("smsCategoryBounds", smsCategoryBounds);
     }
@@ -55,8 +54,8 @@ public class SmsCategoryBoundsController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody SmsCategoryBoundsEntity smsCategoryBounds){
-		smsCategoryBoundsService.save(smsCategoryBounds);
+    public R save(@RequestBody SmsCategoryBoundsEntity smsCategoryBounds) {
+        smsCategoryBoundsService.save(smsCategoryBounds);
 
         return R.ok();
     }
@@ -65,8 +64,8 @@ public class SmsCategoryBoundsController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody SmsCategoryBoundsEntity smsCategoryBounds){
-		smsCategoryBoundsService.updateById(smsCategoryBounds);
+    public R update(@RequestBody SmsCategoryBoundsEntity smsCategoryBounds) {
+        smsCategoryBoundsService.updateById(smsCategoryBounds);
 
         return R.ok();
     }
@@ -75,8 +74,8 @@ public class SmsCategoryBoundsController {
      * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] ids){
-		smsCategoryBoundsService.removeByIds(Arrays.asList(ids));
+    public R delete(@RequestBody Long[] ids) {
+        smsCategoryBoundsService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }
